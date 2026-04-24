@@ -4,7 +4,11 @@ import bfhlRoutes from './routes/bfhl.routes.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://bajaj-kpke.vercel.app', 'http://localhost:5173'],
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 app.use(express.json({ limit: '1kb' }));
 
 app.use('/bfhl', bfhlRoutes);
