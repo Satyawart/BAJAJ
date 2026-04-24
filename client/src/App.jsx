@@ -21,7 +21,7 @@ export default function App() {
         .filter(Boolean);
 
       const startTime = performance.now();
-      const res = await fetch('/bfhl', {
+      const res = await fetch('https://bajaj-sqaq.onrender.com/bfhl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: edges }),
